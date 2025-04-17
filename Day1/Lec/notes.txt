@@ -1,0 +1,10 @@
+tsc index.ts
+
+
+tsc index.ts --watch
+
+
+tsc --init
+
+
+tsc --watch
