@@ -34,3 +34,7 @@
 //   sayHi(msg:string):void{
 //       console.log(msg);
 //   }
+
+// array
+// names :Array<string> ;
+// phons :string[] = ['123','456'];
