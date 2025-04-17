@@ -3,7 +3,7 @@ class Person {
     public Phone: string;
     private Age: number;
     protected IsMale: boolean;
-    publicDisplay(): void {
+    public Display(): void {
         console.log(this.Name);
         console.log(this.Phone);
         console.log(this.Age);
@@ -20,4 +20,4 @@ class Person {
 
 
 let p = new Person('zhangsan', '123456789', 18, true);
-p.publicDisplay();
+p.Display();
