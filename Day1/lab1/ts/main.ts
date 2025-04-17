@@ -1,0 +1,48 @@
+import {Book} from "./Book";
+import {ElectronicProduct} from "./ElectronicProduct";
+import { Rectangle } from "./Rectangle";
+import { Square } from "./Square";
+import {Cart} from "./Cart";
+import { IProduct } from "./interface";
+
+const rectangle = new Rectangle(3, 2);
+console.log(rectangle.area());
+console.log(rectangle.calcCircumference());
+console.log(rectangle.toString());
+console.log(Rectangle.whoAmI());
+
+const square = new Square(10);
+console.log(square.area());
+console.log(square.calcCircumference());
+console.log(square.toString());
+console.log(Square.whoAmI());
+
+
+const electronicProduct = new ElectronicProduct(1, "Laptop", 1299.99, "Dell");
+const electronicProduct2 = new ElectronicProduct(2, "Smartphone", 899.99, "Samsung");
+const electronicProduct3 = new ElectronicProduct(3, "Tablet", 599.99, "Apple");
+// console.log(electronicProduct.getInfo());
+const book = new Book(1, "The Pragmatic Programmer", 45.59, 352, "David Thomas");
+const book2 = new Book(2, "Clean Code", 59.99, 464, "Robert C. Martin");
+const book3 = new Book(3, "The Art of Computer Programming", 119.99, 1000, "Donald E. Knuth");
+// console.log(book.getInfo());
+
+
+const cart = new Cart<IProduct>();
+
+cart.add(electronicProduct);
+cart.add(electronicProduct2);
+cart.add(electronicProduct3);
+
+cart.add(book);
+cart.add(book2);
+cart.add(book3);
+
+cart.print();
+
+cart.remove(1);
+
+cart.print();
+
+
+
