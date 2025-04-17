@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Person = void 0;
-class Person {
+export class Person {
     constructor(name, phone, age, isMale) {
         this._name = name;
         this._phone = phone;
@@ -45,4 +42,3 @@ class Person {
         console.log('static method');
     }
 }
-exports.Person = Person;

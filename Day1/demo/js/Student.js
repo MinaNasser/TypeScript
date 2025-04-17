@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Student = void 0;
-const Person_1 = require("./Person");
-class Student extends Person_1.Person {
+import { Person } from "./Person";
+export class Student extends Person {
     constructor(name, phone, age, isMale, studentId) {
         super(name, phone, age, isMale);
         this._studentId = studentId;
@@ -19,4 +16,3 @@ class Student extends Person_1.Person {
         console.log("I am a student.");
     }
 }
-exports.Student = Student;
