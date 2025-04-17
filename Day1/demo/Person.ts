@@ -17,3 +17,7 @@ class Person {
     }
 
 }
+
+
+let p = new Person('zhangsan', '123456789', 18, true);
+p.publicDisplay();
