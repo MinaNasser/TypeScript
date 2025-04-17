@@ -1,48 +1,55 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Person = void 0;
-class Person {
-    constructor(name, phone, age, isMale) {
+export class Person {
+    private _name: string;
+    private _phone: string;
+    private _age: number;
+    private _isMale: boolean;
+
+    public constructor(name: string, phone: string, age: number, isMale: boolean) {
         this._name = name;
         this._phone = phone;
         this._age = age;
         this._isMale = isMale;
     }
-    Display() {
+
+    public Display(): void {
         console.log(this._name);
         console.log(this._phone);
         console.log(this._age);
         console.log(this._isMale);
     }
+
     // getter and setter for Age
-    set Age(age) {
+    public set Age(age: number) {
         if (age > 0) {
             this._age = age;
         }
     }
-    get Age() {
+    public get Age() {
         return this._age;
     }
-    set Name(name) {
+
+    public set Name(name: string) {
         this._name = name;
     }
-    get Name() {
+    public get Name() {
         return this._name;
     }
-    set Phone(phone) {
+
+    public set Phone(phone: string) {
         this._phone = phone;
     }
-    get Phone() {
+    public get Phone() {
         return this._phone;
     }
-    set IsMale(isMale) {
+
+    public set IsMale(isMale: boolean) {
         this._isMale = isMale;
     }
-    get IsMale() {
+    public get IsMale() {
         return this._isMale;
     }
-    static DisplayStatic() {
+
+    public static DisplayStatic(): void {
         console.log('static method');
     }
 }
-exports.Person = Person;
